@@ -43,6 +43,22 @@ public class Main {
             System.out.println(s);
         }
 
+        System.out.println("-------------Empolyee salary-------------------");
+
+
+        List<Employee> employees = Arrays.asList(
+                new Employee("Zara", 50000),
+                new Employee("Ali", 60000),
+                new Employee("Babu", 60000)
+        );
+
+        Collections.sort(employees , new EmployeeSalaryComparator());
+        System.out.println(employees);
+
+
+
+
+
 
 
 
