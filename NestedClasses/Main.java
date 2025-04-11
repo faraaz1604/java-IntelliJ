@@ -10,6 +10,27 @@ public class Main {
                 .build();
 
         user.display();
+
+
+        Product product = new Product.Builder()
+                .setId(21)
+                .setName("pen")
+                .build();
+        product.displayProduct();
+
+
+
+        Book book = new Book.Builder()
+                .setTitle("Java Deep Dive")
+                .setAuthor("Faraaz Khan")
+                .setIsbn("123-4567891234")
+                .setPrice(499.99)
+                .setGenre("Programming")
+                .build();
+
+        book.displayBook();
+
+
     }
 
 
