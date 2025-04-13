@@ -22,7 +22,7 @@ public class Combinefunctions {
             return numGen;
         };
 
-        Predicate<Integer> isOdd = num -> num % 2 !=0;
+        Predicate<Integer> isOdd = num -> num % 2 ==0;
 
         Function<Integer, String> convertString = n -> "Number: " + n;
 
