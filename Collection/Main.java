@@ -68,6 +68,23 @@ public class Main {
 
         students.sort(Comparator.comparing(Student::getGpa).reversed());
 
+        List<Integer> nums = Arrays.asList(12,-2,33,34,56,21);
+
+        int min = nums.stream()
+                        .min(Integer::compareTo).get();
+        int max = nums.stream()
+                        .max(Integer::compareTo).get();
+
+        System.out.println(min +" | "+ max);
+
+        nums.sort((n1, n2) -> n1 - n2);
+        System.out.println(nums.get(0));
+        System.out.println(nums.get(nums.size()-1));
+
+        LinkedList
+
+
+
 
     }
 }
