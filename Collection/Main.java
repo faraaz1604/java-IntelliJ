@@ -1,5 +1,7 @@
 package Collection;
 
+import Collection.LinkedList.LinkedList;
+
 import java.util.*;
 
 public class Main {
@@ -81,7 +83,15 @@ public class Main {
         System.out.println(nums.get(0));
         System.out.println(nums.get(nums.size()-1));
 
-        LinkedList
+        LinkedList myList = new LinkedList();
+
+        myList.add(20);
+        myList.add(30);
+        myList.add(40);
+        myList.add(80);
+
+        myList.printList();
+
 
 
 
