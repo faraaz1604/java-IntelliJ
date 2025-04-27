@@ -4,9 +4,9 @@ public class Syncronised {
 
     int counter;
 
-    public synchronized void increment(){
-        counter++;
-    }
+//    public synchronized void increment(){
+//        counter++;
+//    }
 
 
     public int getCounter(){
@@ -19,13 +19,13 @@ public class Syncronised {
 
         Thread thread1 = new Thread(() ->{
             for (int i =1; i<=1000; i++){
-                 sy.increment();
+                 sy.counter++;
             }
         });
 
         Thread thread2 = new Thread(() ->{
             for (int i =1; i<=1000; i++){
-                sy.increment();
+                sy.counter++;
             }
         });
 

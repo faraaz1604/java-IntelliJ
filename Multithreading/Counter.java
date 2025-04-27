@@ -22,6 +22,5 @@ public class Counter {
                 System.out.println(i);
             }
         });
-        thread.start();
     }
 }
