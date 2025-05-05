@@ -22,7 +22,7 @@ public class Challenge2 {
     }
 
     public static void main(String[] args) {
-        char result = findNonRepeatingChar("abccbadee");
+        char result = findNonRepeatingChar("bccbaddee");
         System.out.println(result);
     }
 
