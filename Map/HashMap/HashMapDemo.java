@@ -12,18 +12,22 @@ public class HashMapDemo {
         students.put(3,"bumika");
         students.put(4,"charandi");
 
-        for (Integer roll : students.keySet()){
-            System.out.println("Keys : "+ roll );
+//        for (Integer roll : students.keySet()){
+//            System.out.println("Keys : "+ roll );
+//        }
+//
+//        for(String names : students.values()){
+//            System.out.println("Values : " + names);
+//        }
+//
+//        for (Map.Entry<Integer, String> studentlist : students.entrySet()) {
+//            System.out.println(studentlist.getKey() + " -> " + studentlist.getValue());
+//
+//        }
+        for (Map.Entry<Integer, String> entry : students.entrySet()) {
+            entry.setValue(entry.getValue().toUpperCase());
         }
-
-        for(String names : students.values()){
-            System.out.println("Values : " + names);
-        }
-
-        for (Map.Entry<Integer, String> studentlist : students.entrySet()) {
-            System.out.println(studentlist.getKey() + " -> " + studentlist.getValue());
-
-        }
+        System.out.println(students);
 
     }
 }
