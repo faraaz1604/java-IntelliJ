@@ -10,8 +10,8 @@ public class SortedMapDemo {
 
         map.put(90,"Faraaz");
         map.put(30,"Pavan");
-        map.put(10,"Ruthvik");
         map.put(100,"Vikas");
+        map.put(10,"Ruthvik");
 
         System.out.println(map);
 
