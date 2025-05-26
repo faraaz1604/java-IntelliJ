@@ -24,9 +24,21 @@ public class Main {
 
         System.out.println(myLinkedList.removeLast().data);
         myLinkedList.PrintList();
-        System.out.println(myLinkedList.removeLast().data);
+
+        myLinkedList.prepend(3);
+
         myLinkedList.PrintList();
-        System.out.println(myLinkedList.removeLast().data);
+        myLinkedList.printLength();
+
+        System.out.println(myLinkedList.removeFirst().data);
+
+
+        myLinkedList.append(6);
+        myLinkedList.append(7);
+        myLinkedList.PrintList();
+
+        System.out.println(myLinkedList.get(3).data);
+        System.out.println(myLinkedList.set(2, 28));
         myLinkedList.PrintList();
 
 
