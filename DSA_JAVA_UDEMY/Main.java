@@ -38,7 +38,10 @@ public class Main {
         myLinkedList.PrintList();
 
         System.out.println(myLinkedList.get(3).data);
-        System.out.println(myLinkedList.set(2, 28));
+        System.out.println(myLinkedList.insert(2, 28));
+        myLinkedList.PrintList();
+
+        myLinkedList.reverse();
         myLinkedList.PrintList();
 
 

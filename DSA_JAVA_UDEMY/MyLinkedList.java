@@ -97,8 +97,8 @@ public class MyLinkedList {
 
     }
 
-    public boolean set(int index, int value){
-        if(index < 0 || index >= length) return false;
+    public boolean insert(int index, int value){
+        if(index < 0 || index > length) return false;
         Node newNode = new Node(value);
         Node temp = head;
         Node pre = head;
@@ -108,7 +108,37 @@ public class MyLinkedList {
         }
         pre.next = newNode;
         newNode.next = temp;
+        length++;
         return true;
+    }
+
+    public Node remove(int index){
+        if (index < 0 || index >= length)return null;
+        if(index == 0)return removeFirst();
+        if(index == length-1)return removeLast();
+
+        Node temp;
+        Node prev = get(index-1);
+        temp = prev.next;
+        prev.next = temp.next;
+        temp.next = null;
+        length--;
+        return temp;
+    }
+
+    public void reverse(){
+        Node temp = head;
+        head = tail;
+        tail = temp;
+        Node after  = temp.next;
+        Node before  = null;
+
+        for (int i = 0; i<length; i++){
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
+        }
     }
 
     public void PrintList(){
