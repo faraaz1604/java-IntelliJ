@@ -28,4 +28,16 @@ public class MyLinkedList {
         }
         System.out.println("NULL");
     }
+
+    public void swapInPairs(){
+        Node current  = head;
+        while(current!=null){
+
+                Node temp = current;
+                current = current.next;
+                current.next = temp;
+
+
+        }
+    }
 }
