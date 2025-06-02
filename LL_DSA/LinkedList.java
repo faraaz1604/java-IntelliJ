@@ -5,6 +5,8 @@ public class LinkedList {
     private Node head;
     private Node tail;
 
+    private int length;
+
     class Node {
         int value;
         Node next;
@@ -103,6 +105,43 @@ public class LinkedList {
         return false;
 
     }
+
+    public Node findKthFromEnd(int k){
+
+        Node fast = head;
+        Node slow = head;
+
+        for(int i = 0 ; i < k; i++){
+            if(fast == null){
+                return null;
+            }
+            fast = fast.next;
+
+        }
+
+        while (fast!= null){
+            fast=fast.next;
+            slow=slow.next;
+        }
+        return slow;
+    }
+
+    public void removeDuplicates(){
+        Node current = head;
+        while(current != null){
+            Node runner = current;
+            while (runner != null && runner.next != null){
+                if (runner.next.value == current.value){
+                    runner.next = runner.next.next;
+                    length--;
+                }
+                runner = runner.next;
+
+            }
+        }
+        current = current.next;
+    }
+
 
 }
 
